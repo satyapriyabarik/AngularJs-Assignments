@@ -1,0 +1,11 @@
+
+<div class="container">
+   <a href="#!home" class="buttonclass">Back</a>
+  <h4>Book Details</h4>
+  <div class="card details" ng-repeat="ps in passeddata[0].bookDetails | filter: { id:+pid }">
+    <h4>{{ps.title}}</h4>
+    <div>Book by: {{bk.author}}</div>
+            <p>{{ps.desc}}</p>
+            <p>{{ps.price | currency}}</p>
+  </div>
+</div>

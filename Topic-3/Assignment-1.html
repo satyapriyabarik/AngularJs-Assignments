@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<body ng-app="myApp">
+<h4>Assignment 1:</h4>
+<table border="1" width="50%">
+    <tr>
+        <td><strong>Company Name</strong></td>
+        <td><strong>Location</strong></td>
+    </tr>
+    <tr>
+        <td>{{companyName}}</td>
+        <td>{{location}}</td>
+    </tr>
+    
+</table>
+<div ng-controller="appCtrl">
+   <form> 
+  <table border="1" width="50%">
+      <tr>
+          <td><strong>Company Name</strong></td>
+          <td><strong>Location</strong></td>
+      </tr>
+      <tr>
+          <td>{{companyName}}</td>
+          <td>{{location}}</td>
+      </tr>
+  </table>
+  </form>
+  <hr/>
+</div>
+<form> 
+    <table border="1" width="50%">
+        <tr>
+            <td><strong>Company Name: </strong><input type="text" ng-model="companyName"/></td>
+            <td><strong>Location: </strong><input type="text" ng-model="location"/></td>
+        </tr>
+    </table>
+    </form>
+    <p>$rootScope is globally accessible, its scope is available for other controllers.<br/>
+    $scope is accessible inside the controller where it is defined.
+    Here top table is displaying data from $rootScope and modifying the value outside controller is also modifying the display value. 
+    </p>
+</body>
+<script src="as1Ctrl.js"></script>
+</html>

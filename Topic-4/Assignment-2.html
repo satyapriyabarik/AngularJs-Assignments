@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en-US">
+ <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+ </head>   
+
+
+<body ng-app="myApp">
+    <div ng-controller="appCtrl">
+    <h4>Assignment 2:</h4>
+    <form>
+        <table border="1" width="50%">
+            <tr>
+                <td width="50%"><strong>Enter Sentence: </strong><input type="text" ng-model="customText" style="width:350px"/></td>
+            </tr>
+        </table>
+    </form>
+    <br/>
+        <div>{{customText | CamelCaseFilter}}</div>
+        </div>
+</body>
+<script src="as2Ctrl.js"></script>
+</html>

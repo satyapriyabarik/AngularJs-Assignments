@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en-US">
+ <head>
+     <style>
+         .display{
+             border:1px solid red;padding:10px;
+             width:50%;
+         }
+     </style>
+     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+ </head>   
+<body ng-app="">
+<h4>Assignment 1:</h4>
+<div >
+    <input type="text" ng-model="num1" />
+    <div  ng-show="num1 && num1.charAt(0)!='-'">No is Positive</div>
+    <div  ng-show="num1.charAt(0)=='-'">No is Negative</div>
+</div>
+</body>
+</html>

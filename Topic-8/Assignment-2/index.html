@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<link href="./custom.css" rel="stylesheet"/>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+</head>
+<body ng-app="myApp">
+    <h4>Assignment 2:</h4>
+    <div ng-controller="appCtrl">
+        <div class="container">
+    <h2 class="parlior">{{bookParlourDetails[0].name}}</h2>
+    <p class="address">Address:
+        <span>{{bookParlourDetails[0].address[0].shopno}}, </span>
+        <span>{{bookParlourDetails[0].address[0].street}}, </span>
+        <span>{{bookParlourDetails[0].address[0].city}}, </span>
+        <span>{{bookParlourDetails[0].address[0].state}}, </span>
+        <span>{{bookParlourDetails[0].address[0].pin}}, </span>
+        <span>{{bookParlourDetails[0].address[0].country}}. </span>
+
+    </p>
+    <hr />
+        <ng-view></ng-view>
+    
+    </div>
+
+</body>
+<script src="asCtrl.js"></script>
+<script src="book-detailsCtrl.js"></script>
+
+</html>

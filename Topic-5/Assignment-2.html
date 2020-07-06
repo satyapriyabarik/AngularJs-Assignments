@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <style>
+        .datable {
+            width: 600px;
+            margin: 0 auto;
+        }
+
+        .datable thead th {
+            text-align: left;
+            padding: 10px;
+        }
+
+        .datable tbody tr:nth-child(even) {
+            background-color: #CCC;
+        }
+
+        .datable tbody td {
+            padding: 10px;
+            border: 1px solid silver;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+
+<body ng-app="myApp">
+    <h4>Assignment 2:</h4>
+    <div ng-controller="appCtrl">
+        <h4>Employee Details</h4>
+        <table class="datable" cellspacing="0">
+            <thead>
+                <tr>
+                    <th width="10%"> Id</th>
+                    <th> Name </th>
+                    <th> Designation </th>
+                    <th> Location </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-show="stroredData.length==0"><td colspan="2" >Loading please wait...</td></tr>
+                <tr ng-repeat="sr in stroredData">
+                    <td>{{sr.id}}</td>
+                    <td>{{sr.name}}</td>
+                    <td>{{sr.designation}}</td>
+                    <td>{{sr.location}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+<script src="as2Ctrl.js"></script>
+
+</html>

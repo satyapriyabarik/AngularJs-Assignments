@@ -1,0 +1,13 @@
+<div class="container">
+    <h5>Top 5 books for the week:</h5>
+    <div class="cd-container">
+        <div class="card" ng-repeat="bk in bookParlourDetails[0].bookDetails | filter: { rating:5 }"><a ng-href="#!details:{{bk.id}}">
+            <h4>{{bk.title}}</h4>
+            <div>(Book by: {{bk.author}})</div>
+            <p>{{bk.language}}</p>
+            <p>{{bk.price | currency}}</p>
+            </a>
+        </div>
+    </div>
+   <table class="btn-wrapper"><tr><td><a href="#!booklists" class="buttonclass">View all Books</a></td><td><a href="#!newbook" class="buttonclass">New Books</a></td></tr></table>
+</div>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <style>
+        .nav {
+            padding: 0px;
+            margin: 0px;
+            list-style: none;
+        }
+
+        .nav .navbar-btn {
+            padding: 10px;
+            text-align: center;
+            border-radius: 4px;
+            background-color: rgb(168, 233, 233);
+            color: chocolate;
+            float: left;
+            margin: 5px;
+        }
+
+        .clear {
+            clear: both;
+        }
+
+        .container {
+            padding: 10px;
+            border: 1px solid;
+            margin: 0 auto;
+            width: 40%;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script  src="https://cdnjs.cloudflare.com/ajax/libs/bower-angular-translate/2.5.2/angular-translate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-i18n/1.8.0/angular-locale_fr.min.js"></script>
+</head>
+
+<body ng-app="myApp">
+    <h4>Assignment 2:</h4>
+    <div ng-controller="appCtrl">
+        <div class="container" >
+            <p><mark>{{fullstr}}</mark></p>
+            <p id="content">{{string1 | translate}} {{price | currency}} {{string2 | translate}}</p>
+            <p><button ng-click="clk()">Click to view on console</button></p>
+        </div>
+        
+    </div>
+</body>
+<script src="as2Ctrl.js"></script>
+</html>

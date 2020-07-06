@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <style>
+        .container{
+            width:800px;
+            margin: 0 auto;
+            padding:10px;
+        }
+        .cdlib th{
+            text-align:left;
+        }
+        .cdlib td{
+            padding:5px;
+            border:1px solid #ccc;
+        }
+        .cdlib tr:nth-child(even){
+            background-color:rgb(185, 183, 183);
+        }
+        .parlior{
+            text-align:center;
+            color:blueviolet;
+        }
+        .address{
+            text-align: center;
+            color:teal
+        }
+    </style>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<body ng-app="myApp">
+<h4>Assignment 2:</h4>
+<div ng-controller="appCtrl">
+    <div class="container">
+        <h2 class="parlior">{{cdParlourDetails[0].name}}</h2>
+        <p class="address">Address: 
+            <span>{{cdParlourDetails[0].address[0].shopno}}, </span>
+            <span>{{cdParlourDetails[0].address[0].street}}, </span>
+            <span>{{cdParlourDetails[0].address[0].city}}, </span>
+            <span>{{cdParlourDetails[0].address[0].state}}, </span>
+            <span>{{cdParlourDetails[0].address[0].pin}}, </span>
+            <span>{{cdParlourDetails[0].address[0].country}}. </span>
+            
+        </p><hr/>
+        <table class="cdlib" border="0" width="100%" cellspacing="0">
+            <thead><tr>
+                <th>Title</th>
+                <th>Language</th>
+                <th>Price (INR)</th>
+            </tr>
+            </thead>
+           <tbody>
+                     <tr ng-repeat="cd in cdParlourDetails[0].cdDetails">
+                    <td>{{cd.title}}</td>
+                    <td>{{cd.language}}</td>
+                    <td>{{cd.price}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+</body>
+<script src="as2Ctrl.js"></script>
+</html>

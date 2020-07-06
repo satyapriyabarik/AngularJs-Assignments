@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<body>
+<h4>Assignment- 2:</h4>
+<div ng-app="">
+    <form name="form1" novalidate>
+        <p>Enter Email ID: <input type="email" ng-model="email"  name="email" ng-pattern="/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/" required>
+            <span style="color:red" ng-show="form1.email.$dirty&&form1.email.$error.pattern">Please enter valid email id</span>
+        </p>
+        <input type="submit" value="Submit" ng-disabled="form1.$invalid"/>
+    </form>
+  
+</div>
+
+</body>
+</html>

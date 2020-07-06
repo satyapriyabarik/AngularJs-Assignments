@@ -1,0 +1,10 @@
+
+<div class="container">
+   <a href="#!home" class="buttonclass">Back</a>
+  <h4>CD Details</h4>
+  <div class="card details" ng-repeat="ps in passeddata[0].cdDetails | filter: { id:+pid }">
+    <h4>{{ps.title}}</h4>
+            <p>{{ps.desc}}</p>
+            <p>{{ps.price | currency}}</p>
+  </div>
+</div>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en-US">
+ <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+ </head>   
+
+
+<body ng-app="myApp">
+    <div ng-controller="appCtrl">
+    <h4>Assignment 3:</h4>
+    <p>{{definedArray}}</p>
+    <form>
+        <table border="1" width="50%">
+            <tr>
+                <td width="50%"><strong>Search: </strong><input type="text" ng-model="customText"/></td>
+            </tr>
+        </table>
+    </form>
+    <br/>
+        <span ng-repeat="st in definedArray | ArrayFilter : customText">"{{st}}"</span>
+        </div>
+</body>
+<script src="as3Ctrl.js"></script>
+</html>

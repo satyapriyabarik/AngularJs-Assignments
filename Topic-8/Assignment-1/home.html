@@ -1,0 +1,12 @@
+<div class="container">
+    <h5>Top 5 CDs rented for the week:</h5>
+    <div class="cd-container">
+        <div class="card" ng-repeat="cd in cdParlourDetails[0].cdDetails | filter: { rating:5 }"><a ng-href="#!details:{{cd.id}}">
+            <h4>{{cd.title}}</h4>
+            <p>{{cd.language}}</p>
+            <p>{{cd.price | currency}}</p>
+            </a>
+        </div>
+    </div>
+   <table class="btn-wrapper"><tr><td><a href="#!cdlists" class="buttonclass">View all CDs</a></td><td><a href="#!newcd" class="buttonclass">New CDs</a></td></tr></table>
+</div>

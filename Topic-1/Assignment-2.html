@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+<body ng-app="MyApp">
+    <h4>Assignment 2:</h4>
+    <div ng-controller="appCtrl">
+        <table>
+            <tr>
+                <td><label>Grocery Total Amount:(INR) </label></td>
+                <td><input type="text" ng-model="grossamount" disabled /></td>
+            </tr>
+            <tr>
+                <td><label>Enter coupon code for discount: </label></td>
+                <td><input type="text" ng-model="discountcode" /></td>
+            </tr>
+            <tr>
+                <td ng-switch="discountcode" colspan="2">
+                    <hr />
+                    <label>
+                        Discount:
+                        <span ng-switch-when="CDMK1610">10% applied</span>
+                        <span ng-switch-when="CDMK1620">20% applied</span>
+                        <span ng-switch-when="CDMK1690">90% applied</span>
+                        <span ng-switch-default>5% applied</span>
+                    </label><br />
+                    <label>Total Discount (INR): <span ng-switch-when="CDMK1610">{{grossamount*10/100}}</span></label>
+                    <span ng-switch-when="CDMK1620">{{grossamount*20/100}}</span>
+                    <span ng-switch-when="CDMK1690">{{grossamount*90/100}}</span>
+                    <span ng-switch-default>{{grossamount*5/100}}</span></label>
+
+                    <br />  <hr />
+                    <label><strong>Final Amount (INR):
+                        <span ng-switch-when="CDMK1610">{{grossamount-(grossamount*10/100)}}</span>
+                        <span ng-switch-when="CDMK1620">{{grossamount-(grossamount*20/100)}}</span></label>
+                        <span ng-switch-when="CDMK1690">{{grossamount-(grossamount*90/100)}}</span></label>
+                        <span ng-switch-default>{{grossamount-(grossamount*5/100)}}</span></strong></label></td>
+                </td>
+            </tr>
+        </table>
+
+    </div>
+
+</body>
+<script src="as2Ctrl.js"></script>
+
+</html>

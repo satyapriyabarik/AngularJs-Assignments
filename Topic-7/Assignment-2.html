@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en-US">
+ <head>
+     <style>
+         .card{
+             width:250px;
+             padding:5%;
+             text-align:center;
+             box-shadow:1px 1px 1px 2px #CCC;
+         }
+     </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>   
+<body  ng-app="myApp">
+<h4>Assignment 2:</h4>
+<div ng-controller="appCtrl">
+    <form>
+    <div class="card" ng-show="assignval">
+        <h4>“This will be hidden”</h4>
+    </div>
+    <br/>
+    <button type="button" value="Click to hide card" ng-click="divshow()">{{b1}}</button>
+    </form>
+</div>
+
+</body>
+<script>
+     var MyApp = angular.module('myApp', []);
+    MyApp.controller('appCtrl', function ($scope) {
+   $scope.assignval= true;
+   $scope.b1 ="Click to hide card"
+    $scope.divshow = function(){
+      if($scope.assignval==true){
+        $scope.assignval= $scope.assignval=false;
+        $scope.b1 ="Click to show card"
+      }else{
+        $scope.assignval= $scope.assignval=true;
+        $scope.b1 ="Click to hide card"
+      }
+      
+    }    
+    });
+</script>
+</html>

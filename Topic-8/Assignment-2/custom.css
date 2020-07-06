@@ -1,0 +1,60 @@
+
+    .container {
+        width: 900px;
+        margin: 0 auto;
+        padding: 10px;
+    }
+
+   
+
+    .parlior {
+        text-align: center;
+        color: blueviolet;
+    }
+
+    .address {
+        text-align: center;
+        color: teal
+    }
+    .cd-container{
+        display:flex;
+        padding:10px;
+        flex-wrap: wrap;
+    }
+    .card{
+             width:220px;
+             padding:3%;
+             margin:10px;
+             text-align:center;
+             box-shadow:1px 1px 1px 2px #CCC;
+             background-image:linear-gradient(chocolate,maroon);
+             border-radius:4px;
+         }
+          .card a{
+              color:gold;
+              text-decoration:none;
+          }
+         .card:hover{
+            background-image:linear-gradient(blue,rgb(226, 166, 166));
+            cursor: pointer;
+         } 
+         .buttonclass{
+             padding:5px;
+             display:block;
+             border:1px solid silver;
+             border-radius:4px;
+             width:100px;
+             background-image:linear-gradient(grey,white);
+             text-decoration:none;
+             text-align:center;
+             color:rgb(48, 17, 5);
+         }
+        .card.details{
+          width:500px;
+          color:white;
+          cursor:initial;
+        }
+        .card.details:hover{
+          background-image:linear-gradient(rgb(226, 166, 166),blue);
+        }
+        .btn-wrapper{margin:0 auto}

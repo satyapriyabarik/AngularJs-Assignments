@@ -1,0 +1,46 @@
+<html ng-app="myApp">
+
+<head>
+    <!-- Jasmine References -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/jasmine/2.3.3/jasmine.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/2.3.3/jasmine.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/2.3.3/jasmine-html.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/2.3.3/boot.min.js"></script>
+
+    <!-- Angular and Angular Mock references -->
+    <script type="text/javascript" src="https://code.angularjs.org/1.4.0-rc.2/angular.min.js"></script>
+    <script type="text/javascript" src="https://code.angularjs.org/1.4.0-rc.2/angular-mocks.js"></script>
+
+</head>
+
+<body ng-controller="myController">
+</body>
+<script type="text/javascript" src="as2Ctrl.js"></script>
+<script type="text/javascript">
+    describe('My Service', function () {
+
+        beforeEach(module('myApp'));
+        var $controller;
+        beforeEach(inject(function (_$controller_) {
+            $controller = _$controller_;
+
+        }));
+
+
+
+        describe('Length of Response', function () {
+            it('It should be greater than one', function () {
+                var $scope = {};
+                var controller = $controller('myController', { $scope: $scope });
+                $scope.rLength = $scope.lockdown.length
+                expect($scope.rLength).toBe($scope.rLength > 1);
+            });
+
+        });
+
+    });
+
+</script>
+
+</html>

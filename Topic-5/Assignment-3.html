@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<body ng-app="myApp">
+ <div ng-controller="appCtrl">   
+<h4>Assignment 3:</h4>
+<div >
+  <p>Enter Number: <input type="text" ng-model="inputNo"><button ng-click="getsqrt()">Get</button></p>
+  <br/>
+  <div ng-show="inputNo">Square root of {{inputNo}}: <span>{{sqrtresult}}</span></div>
+</div>
+</div>
+<script src="as3Ctrl.js"></script>
+</body>
+</html>

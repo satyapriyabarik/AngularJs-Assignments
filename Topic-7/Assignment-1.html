@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+<body>
+    <h4>Assignment 1:</h4>
+    <div ng-app="myApp">
+        <form ng-controller="appCtrl">
+            <table width="25%" border="1">
+                <tr>
+                    <td width=80%  ng-show="src1!=undefined">
+                        <img ng-src={{src1}} alt="placeholder for image" width="300"/>
+                    </td>
+                    <td><input type="checkbox" ng-change="changeImage()" ng-model="chkselct"></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+
+</body>
+<script>
+    var MyApp = angular.module('myApp', []);
+    MyApp.controller('appCtrl', function ($scope) {
+        $scope.src1 = './images/im3.jpg'
+        
+        $scope.changeImage = function () {
+
+            if ($scope.chkselct == true) {
+                $scope.src1 = "./images/im2.jpg";
+            } else {
+            $scope.src1 = "./images/im3.jpg";
+            }
+
+        }
+    });
+</script>
+
+</html>

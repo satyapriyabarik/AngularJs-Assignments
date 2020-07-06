@@ -1,0 +1,33 @@
+<div class="container">
+  <a href="#!home" class="buttonclass">Back</a>
+  <h1>New Book Entry</h1>
+  <form>
+    <table width="100%" cellspacing="0" border="1">
+       <tr>
+        <td>Id:</td>
+        <td><input type="text" ng-model="cid"/></td>
+      </tr>
+      <tr>
+        <td>Title:</td>
+        <td><input type="text" ng-model="ctitle"/></td>
+      </tr>
+      <tr>
+        <td>Language:</td>
+        <td><input type="text" ng-model="clanguage"/></td>
+      </tr>
+      <tr>
+        <td>Price:</td>
+        <td><input type="text" ng-model="cprice"/></td>
+      </tr>
+      <tr>
+        <td>Descriptions:</td>
+        <td><textarea ng-model="cdesc"></textarea></td>
+      </tr>
+      <tr>
+        <td>Ratings:</td>
+        <td><input type="number" min="1" max="5" ng-model="crate"/></td>
+      </tr>
+      <tr><td></td><td><label><button>Submit</button> <button>Cancel</button></label></td></tr>
+    </table>
+  </form>
+  </div>

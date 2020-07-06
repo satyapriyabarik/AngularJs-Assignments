@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<style>
+    .container{
+            width:200px;
+            margin: 0 auto;
+            padding:10px;
+        }
+        .container table td{
+            padding:5px;
+            border:1px solid #ccc;
+            text-align:center;
+            font-size:1.2em;
+        }
+        .spacer{
+            display:inline-block;
+            padding:5px;
+        }
+</style>    
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+<body ng-app="myApp">
+    <h4>Assignment 3:</h4>
+    <div ng-controller="appCtrl">
+
+        <p><button ng-click="generatex()">Generate tables of 5</button></p>
+        <div class="container">
+            <table>
+                <table width="100%" border="1">
+                    <tr ng-repeat="mult in mArray">
+                        <td><span class="spacer">{{mult.leftop}}</span><span class="spacer">X</span><span class="spacer">{{mult.rightop}}</span><span class="spacer">=</span><span class="spacer">{{mult.leftop*mult.rightop}}</span></td>
+                    </tr>
+                </table>
+            </table>
+
+        </div>
+
+    </div>
+
+</body>
+<script src="as3Ctrl.js"></script>
+
+</html>

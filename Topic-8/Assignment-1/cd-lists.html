@@ -1,0 +1,13 @@
+
+
+<div class="container">
+  <a href="#!home" class="buttonclass">Back</a>
+  <div class="cd-container">
+        <div class="card" ng-repeat="cd in cdParlourDetails[0].cdDetails"><a ng-href="#!details:{{cd.id}}">
+            <h4>{{cd.title}}</h4>
+            <p>{{cd.language}}</p>
+            <p>{{cd.price | currency}}</p>
+            </a>
+        </div>
+    </div>
+</div>
